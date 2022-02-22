@@ -9,17 +9,17 @@ public class Main {
 		String inputfile = "resources/input.java";
 		String outputfile = "resources/output.txt";
 		
-		Reader reader = null;
-		Writer writer = null;
+		IOReader reader = null;
+		IOWriter writer = null;
+		IOCounter counter = new IOCounter();
 		
 		try {
-			reader = new Reader(inputfile);
-			Map <String, Integer> map = reader.read();
-//			System.out.println(map);
-			writer = new Writer(outputfile, map);
+			reader = new IOReader(inputfile);
+			String text = reader.read();
+			Map <String, Integer> map = counter.count(text);
+			writer = new IOWriter(outputfile, map);
 			writer.save();
 		} catch (FileParseException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 		
