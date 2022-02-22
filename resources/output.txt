@@ -1,0 +1,14 @@
+new : 4
+private : 3
+package : 1
+static : 1
+void : 6
+import : 6
+this : 2
+for : 4
+int : 2
+public : 12
+final : 1
+class : 1
+if : 6
+return : 9
